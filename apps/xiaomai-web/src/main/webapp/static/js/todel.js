@@ -1,0 +1,3 @@
+var path='/oa-web'; 	
+
+		

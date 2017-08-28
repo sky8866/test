@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Title: xiaomai-api
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: com.antiphon.xiaomai.modules.api
+Build-Jdk: 1.6.0_13
+Built-By: qq
+Created-By: Maven Integration for Eclipse
+

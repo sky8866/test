@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	default-lazy-init="true">
+
+	<description>Quartz的本地Cron式执行任务配置</description>
+
+	<!-- Quartz本地Schduler -->
+	<bean id="localQuartzScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<!-- Triggers集成 -->
+		<property name="triggers">
+			<list> 
+ 
+		<ref bean="lplanGuilvScannerTrigger" />  
+ 
+       
+ 
+  
+			</list>
+		</property>
+		<!-- Quartz配置, 本地运行无需单独的quartz.properties文件，在此简单配置即可 -->
+		<property name="quartzProperties">
+			<props>
+				<prop key="org.quartz.threadPool.threadCount">5</prop>
+			</props>
+		</property>
+		<!-- 启动时延期2秒开始任务 -->
+		<property name="startupDelay" value="0" />
+	</bean>
+	
+	
+		<!--lotteryTrigger -->
+	<bean id="lotteryTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lotteryJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+ 
+		<property name="cronExpression" value="0 1,5,10,30,40,56 21  ? * *" />
+ 
+	</bean>
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="lotteryJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="lotteryGuilvJob" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean>
+	
+	
+			<!--guilvJobTrigger -->
+	<bean id="guilvJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="guilvJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+ 
+		<property name="cronExpression" value="0 58 21 ? * *" />
+ 
+	</bean>
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="guilvJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="guilvJob" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean>
+	
+	
+				<!--guilvsscJobTrigger -->
+	<bean id="guilvSscPlanScannerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="guilvSscPlanScannerJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="2 2,12,22,32,42,52 0,1,2,9,10,11,12,13,14,15,16,17,18,19,20,21 * * ?" />
+	</bean>
+	
+					<!--guilvsscJobTrigger -->
+	<bean id="guilvSscPlanScanner2Trigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="guilvSscPlanScannerJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="2 0/1 0,1,2,22,23 * * ?" />
+	</bean>
+	
+	
+	
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="guilvSscPlanScannerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="guilvSscPlanScanner" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean>
+	
+	
+	
+				<!--guilvsscJobTrigger -->
+	<bean id="guilvsscJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="guilvsscJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="10 2,12,22,32,42,52 9,10,11,12,13,14,15,16,17,18,19,20,21 * * ?" />
+	</bean>
+	
+	
+		
+				<!--guilvsscJobTrigger -->
+	<bean id="guilvsscJob2Trigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="guilvsscJobDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="10 0/1 0,1,2,22,23 * * ?" />
+	</bean>
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="guilvsscJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="guilvsscJob" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean> 
+	
+
+	
+	
+	
+	
+	 	
+				<!--guisscJobTrigger -->
+	<bean id="cqPlanGuilvScannerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="cqPlanGuilvScannerDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="15 3,13,23,33,43,53 0,1,2,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * ?" />
+	</bean>
+	
+	
+					<!--guisscJobTrigger -->
+	<bean id="cqPlanGuilvScanner2Trigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="cqPlanGuilvScannerDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="15 7,17,27,37,47 0,1,2,22,23 * * ?" />
+	</bean>
+	
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="cqPlanGuilvScannerDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="cqPlanGuilvScanner" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean>
+	
+
+						<!--guisscJobTrigger -->
+	<bean id="lplanGuilvScannerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="lplanGuilvScannerDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="0 53 12 ? * *" />
+	</bean>
+	
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="lplanGuilvScannerDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="planGuilvScanner" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean> 
+	 
+
+
+	 				<!--guisscJobTrigger -->
+	<bean id="pl5PlanGuilvScannerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="pl5PlanGuilvScannerDetail" />
+		<!-- 周一至五,朝九晚五工作时间内每半小时执行一次 -->
+		<property name="cronExpression" value="2 30 12 * * ?" />
+	</bean>
+	
+
+	<!-- JobDetajil, 基于MethodInvokingJobDetailFactoryBean调用普通Spring Bean -->
+	<bean id="pl5PlanGuilvScannerDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="pl5PlanGuilvScanner" />
+		<property name="targetMethod" value="executeByQuartzLocalJob" />
+		<!-- 同一任务在前一次执行未完成而Trigger时间又到时是否并发开始新的执行, 默认为true. -->
+		<property name="concurrent" value="true" />
+	</bean> 
+</beans>

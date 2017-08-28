@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache updateCheck="false" name="hibernateCache">
+
+	<diskStore path="java.io.tmpdir/ehcache/gzxtjy/hibernate" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache maxEntriesLocalHeap="10000" eternal="false" timeToIdleSeconds="300" timeToLiveSeconds="600"
+		overflowToDisk="true" maxEntriesLocalDisk="100000" />
+
+	<!-- Special objects setting. -->
+	 <cache name="com.gzxtjy.modules.entity.office.approvation.Approvation" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.attendance.AttendanceImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.attendance.AttendanceInfo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.attendance.WorkDay" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.attendance.WorkTable" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.attendance.WorkTableUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.Baoxiao" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.comments.Comments" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.event.Event" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.event.EventImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.flowuser.FlowUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.leave.Leave" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.localtel.LocalTel" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.localtel.MyLocalTel" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.notice.Notice" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.notice.NoticeImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.notice.NoticeTodo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.notice.NoticeUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.plugins.FeedBack" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.plugins.OfficeMessage" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.plugins.OfficeNews" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.report.Report" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.report.ReportImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.report.ReportTodo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.report.ReportUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.share.Share" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.share.ShareImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.share.ShareTodo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.share.ShareUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.Department" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.OfficeGroups" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.Privilege" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.Role" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.RolePrivilege" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.User" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.UserContact" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.UserInfo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.UserRole" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.task.OfficeTask" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.task.OfficeTaskProgress" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.task.OfficeTaskProgressToLast" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.task.OfficeTaskToUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.task.ProgressImg" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.UserVersion" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.push.UserPush" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.event.EventReading" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.user.DeleteUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoAppr" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoApprUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoImgNew" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoNew" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.baoxiao.BaoxiaoTodo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		
+		<cache name="com.gzxtjy.modules.entity.office.leave.LeaveAppr" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		
+		<cache name="com.gzxtjy.modules.entity.office.leave.LeaveApprUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.leave.LeaveNew" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.leave.LeaveTodo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.report.CusUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.ApprRecord" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.Contact" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.ContactAppr" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.CustomerAppr" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.CustomerApprUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.CustomerInfo" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.CustomerUser" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		<cache name="com.gzxtjy.modules.entity.office.customer.CusVersion" maxEntriesLocalHeap="1000" eternal="true"
+		overflowToDisk="true" maxEntriesLocalDisk="10000" />
+		
+		
+</ehcache>

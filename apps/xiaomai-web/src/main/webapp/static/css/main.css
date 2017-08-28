@@ -1,0 +1,50 @@
+body,div,ul,td,th,li,p,span,input,textarea,label,select,a {
+	 
+	font-family:"微软雅黑",'宋体',Segoe UI, Helvetica, sans-serif;
+}
+ a {
+  color: #333;
+  text-decoration: none; }
+
+a:hover {
+  color: #3E72A1; }
+ .zxboxr{ width:62px; float:left; margin:2px;
+display:table-cell;   font-size:62px; text-align:left; vertical-align:middle;
+}
+.zxboxr  img{width:60px;  float:left;  }
+
+ .zxboxr2{ width:50px; float:left; 
+display:table-cell;   font-size:50px; text-align:left; vertical-align:middle;
+}
+.zxboxr2  img{width:50px;  float:left;  }
+
+.zxboxr1 {
+	width: 35px;
+	height: 35px;
+	margin: 2px;
+	font-size: 35px;
+	text-align: left;
+	vertical-align: middle;
+	display: inline
+}
+
+.zxboxr1  img {
+	width: 33px;
+	height: 33px;
+}
+
+.border1{
+	
+	 margin-top:5px;
+	 border-bottom: 1px solid #d4d4d4;
+	 margin-bottom: 15px;
+}
+
+.border2{
+	
+	 margin-top:15px;
+	 border-bottom: 1px solid #d4d4d4;
+	 margin-bottom: 15px;
+}
+
+  
