@@ -11,7 +11,7 @@ import com.antiphon.xiaomai.modules.entity.cate.DishImg;
 import com.antiphon.xiaomai.modules.entity.city.City;
  
 public interface CityService {
-	/**
+	/**test
 	 * 根据ID查询
 	 * @param id
 	 * @return

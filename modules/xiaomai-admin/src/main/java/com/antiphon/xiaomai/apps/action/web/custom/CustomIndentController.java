@@ -27,8 +27,7 @@ public class CustomIndentController {
 	
 	@Autowired
 	private CustomIndentService customIndentService;
-	@Autowired
-	private CustomPlayInfoService customPlayInfoService; 
+ 
 	@Autowired
 	private WithdrawalRecordService withdrawalRecordService;
 	@Autowired
