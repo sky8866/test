@@ -11,8 +11,7 @@ import java.util.Iterator;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartFile; 
  
 
 
@@ -234,7 +233,7 @@ public class UploadUtils {
  			savedir_resize.mkdirs();		
  		 
  			 
- 		    	 ImageSizer.resize(filepage, new File(savedir_resize, imagename), width, ext,flag);
+ 		    	 //ImageSizer.resize(filepage, new File(savedir_resize, imagename), width, ext,flag);
  		       
  	 
      }
