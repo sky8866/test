@@ -18,33 +18,7 @@
     <jdbc.driver.groupId>mysql</jdbc.driver.groupId>
   </properties>
   <dependencies>
-  
-  			<dependency>
-			<groupId>com.antiphon.xiaomai.common</groupId>
-			<artifactId>xiaomai-common</artifactId>
-				 
-			</dependency>
-
-	<dependency>
-			<groupId>com.antiphon.xiaomai.modules.domain</groupId>
-			<artifactId>xiaomai-domain</artifactId>
-				 
-			</dependency>
-
-				<dependency>
-			<groupId>com.antiphon.xiaomai.modules.service</groupId>
-			<artifactId>xiaomai-service</artifactId>
-				 
-			</dependency>
-  			<dependency>
-			<groupId>com.antiphon.xiaomai.modules.api</groupId>
-			<artifactId>xiaomai-api</artifactId> 
-			</dependency>
-			
-			  			<dependency>
-			<groupId>com.antiphon.xiaomai.modules.admin</groupId>
-			<artifactId>xiaomai-admin</artifactId> 
-			</dependency>
+   
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
