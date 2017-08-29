@@ -43,7 +43,7 @@
 
 		<!-- Plugin的属性定义 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>1.7</jdk.version>
 	</properties>
 
 	<!-- 设定除中央仓库(repo1.maven.org/maven2/)外的其他仓库,按设定顺序进行查找. -->
@@ -905,8 +905,8 @@
 						<target>${jdk.version}</target>
 						<showWarnings>true</showWarnings>
 						<compilerArguments>  
-	              		<!-- <bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath> -->
-	              		<bootclasspath>${bootclasspath}</bootclasspath>  
+	              		  <bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>
+	              	 
 	        			</compilerArguments>
 					</configuration>
 				</plugin>
