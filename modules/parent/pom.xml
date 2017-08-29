@@ -1050,7 +1050,7 @@
 	<artifactId>tomcat7-maven-plugin</artifactId>
 	<version>2.1</version>
 	<configuration>
-		<url>http://120.77.54.241:8088/test</url>
+		<url>http://120.77.54.241:8088/xiaomai-web</url>
 		<update>true</update>
 		<server>servername</server>
 		<username>admin</username>
