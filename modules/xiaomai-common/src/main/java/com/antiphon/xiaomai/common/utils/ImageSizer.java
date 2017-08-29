@@ -19,6 +19,8 @@ import java.io.OutputStream;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
+
+
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
