@@ -903,11 +903,10 @@
                 <configuration>
                  <source>1.7</source>
                     <target>1.7</target>
-         <encoding>UTF-8</encoding>
-         <compilerArguments>
-                  <verbose />
-                  <bootclasspath>${java.home}\lib\rt.jar</bootclasspath>
-           </compilerArguments>
+                      <showWarnings>true</showWarnings>
+						<compilerArguments>  
+	              		<bootclasspath>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</bootclasspath>  
+	        			</compilerArguments>
      </configuration>
 				</plugin>
 
