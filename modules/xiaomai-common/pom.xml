@@ -267,7 +267,7 @@
 			<artifactId>commons-beanutils</artifactId>
 				<optional>true</optional>
 		</dependency>
-<dependency>
+            <dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 				<optional>true</optional>
@@ -390,7 +390,7 @@
      <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.30</version>
+          
         </dependency>
 
 	</dependencies>
